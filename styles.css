@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Basic reset and body styling */
 * {
     margin: 0;
     padding: 0;
@@ -6,36 +6,159 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Updated font */
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
+/* Header and Navigation */
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
-    padding: 20px;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
 }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-header nav ul li a {
-    color: white;
+header a, nav ul li a {
+    font-family: 'Space Mono', monospace; /* Updated font for a wonky, tech feel */
+    color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-main {
+/* Hero Section */
+.hero {
+    background: #0779e4; /* Or use background-image with a linear-gradient overlay */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Services Overview Section */
+.services-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
+.service {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.service h3 {
+    color: #0779e4;
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin-bottom: 15px;
+}
+
+.service a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Testimonials and Insights */
+.testimonials, .latest-insights {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonials blockquote, .latest-insights article {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+/*Final CTA */
+.final-cta {
+    background: #0779e4;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.final-cta h2 {
+    margin-bottom: 20px;
+}
+
+.final-cta a.cta-button {
+    background: #ff9900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .services-overview {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
